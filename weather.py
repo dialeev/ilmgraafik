@@ -39,10 +39,10 @@ def get_todays_weather_string(data):
         wind_direction = today_weather.get("wind_from_direction", "N/A")
         
         weather_info = (
-            f"Today's Weather in Ardu, Estonia:\n"
-            f"Temperature: {temperature}°C\n"
-            f"Wind Speed: {wind_speed} m/s\n"
-            f"Wind Direction: {wind_direction}°\n"
+            f"Tänane ilm Ardu, Eestis:\n"
+            f"Temperatuur: {temperature}°C\n"
+            f"Tuule kiirus: {wind_speed} m/s\n"
+            f"Tuule suund: {wind_direction}°\n"
         )
         return weather_info
     else:
