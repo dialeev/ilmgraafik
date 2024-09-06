@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
+
+from .weather import weather
 from .epd import EPD
-import weather
 
 def main():
     epd = EPD()
