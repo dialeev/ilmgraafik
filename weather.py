@@ -43,6 +43,7 @@ def get_todays_weather_string(data):
             f"Temperatuur: {temperature}°C\n"
             f"Tuule kiirus: {wind_speed} m/s\n"
             f"Tuule suund: {wind_direction}°\n"
+            f"Viimane uuendus: {current_time.strftime('%Y-%m-%d %H:%M:%S')}"
         )
         return weather_info
     else:
