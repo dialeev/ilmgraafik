@@ -212,6 +212,22 @@ class EPD:
                     self.send_data(image[i + j * Width])
         self.TurnOnDisplay()
         
+    def display_partially(self, image_buffer):
+        if self.width % 4 == 0 :
+            Width = self.width // 4
+        else :
+            Width = self.width // 4 + 1
+        Height = self.height
+
+        self.send_command(0x04)
+        self.ReadBusyH()
+
+        self.send_command(0x10)
+        for j in range(0, Height):
+            for i in range(0, Width):
+                self.send_data(image_buffer[i + j * Width])
+        self.TurnOnDisplay()
+        
     def Clear(self, color=0x55):
         if self.width % 4 == 0 :
             Width = self.width // 4
