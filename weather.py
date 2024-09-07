@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime
-import arrow
 
 LATITUDE = 59.1336
 LONGITUDE = 25.5656
