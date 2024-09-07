@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+import arrow
 
 LATITUDE = 59.1336
 LONGITUDE = 25.5656
@@ -39,7 +40,7 @@ def get_todays_weather_string(data):
         wind_direction = today_weather.get("wind_from_direction", "N/A")
         
         weather_info = (
-            f"Tänane ilm Ardus:\n"
+            f"Tänane ilm:\n"
             f"Temperatuur: {temperature}°C\n"
             f"Tuule kiirus: {wind_speed} m/s\n"
             f"Tuule suund: {wind_direction}°\n"
