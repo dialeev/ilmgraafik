@@ -21,7 +21,7 @@ def main():
         font = ImageFont.load_default()
     x, y = 10, 10
     draw.text((x, y), weather_string, font=font, fill=0)
-    epd.display_partial(epd.getbuffer(image))  # Use display_partial instead of display
+    epd.display(epd.getbuffer(image))
     epd.TurnOnDisplay()
 
 if __name__ == "__main__":
