@@ -1,12 +1,12 @@
 import requests
 from datetime import datetime
 
-LATITUDE = 59.1336
-LONGITUDE = 25.5656
+LATITUDE = 59.0999996
+LONGITUDE = 25.3666652
 MET_NO_API_URL = f"https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={LATITUDE}&lon={LONGITUDE}"
 
 headers = {
-    'User-Agent': 'WeatherApp/1.0 (mario.veelaid@gmail.com)'
+    'User-Agent': 'IlmGraaf/1.0 (mario.veelaid@gmail.com)'
 }
 
 def get_weather_data():
@@ -22,7 +22,7 @@ def get_todays_weather_string(data):
     if not timeseries:
         return "No weather data available."
     
-    current_time = datetime.utcnow()
+    current_time = datetime.now()
     today_weather = None
     
     for forecast in timeseries:
