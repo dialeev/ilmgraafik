@@ -39,7 +39,7 @@ def get_todays_weather_string(data):
         wind_direction = today_weather.get("wind_from_direction", "N/A")
         
         weather_info = (
-            f"Tänane ilm Ardu, Eestis:\n"
+            f"Tänane ilm Ardus:\n"
             f"Temperatuur: {temperature}°C\n"
             f"Tuule kiirus: {wind_speed} m/s\n"
             f"Tuule suund: {wind_direction}°\n"
