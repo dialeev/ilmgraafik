@@ -1,5 +1,5 @@
 import time
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from . import weather
 from .epd import EPD
@@ -26,7 +26,10 @@ def main():
         
         x, y = 10, 10
         draw.text((x, y), weather_string, font=font, fill=0)
-        epd.display_partially(epd.getbuffer(image))
+        
+        inverted_image = ImageOps.invert(image)  # Invert the colors
+        
+        epd.display_partially(epd.getbuffer(inverted_image))
 
         time.sleep(150)  # Sleep for 2.5 minutes
 
