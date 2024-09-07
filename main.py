@@ -1,3 +1,8 @@
+from PIL import Image, ImageDraw, ImageFont
+
+from . import weather
+from .epd import EPD
+
 def main():
     epd = EPD()
     epd.init()
@@ -18,3 +23,6 @@ def main():
     draw.text((x, y), weather_string, font=font, fill=0)
     epd.display_partial(epd.getbuffer(image))  # Use display_partial instead of display
     epd.TurnOnDisplay()
+
+if __name__ == "__main__":
+    main()
